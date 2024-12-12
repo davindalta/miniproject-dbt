@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=postgres
+      - POSTGRES_PORT=5432    
+    volumes:
+      - /home/davin/miniproject-2/postgres-vol:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
